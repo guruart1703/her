@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HER</title>
+    <style>
+        button {
+  background-color: rgb(170, 114, 144);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(170, 114, 144);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 25px rgb(255, 105, 180), 0 0 50px rgb(255, 182, 193);
+  transform: scale(1.05);
+}
+
+      body {
+        background-color: burlywood;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      h1 {
+        font-family: cursive;
+        font-size: 2em;
+        color: rgb(170, 114, 144);
+      }
+
+      .box {
+        width: 70%;
+        margin: 80px auto;
+        padding: 25px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1><i>bro this is probably the worst idea to come up with but whatever</i></h1>
+      <p>man idk y tf am doing this for but whatever just click the below shit</p>
+      <p><u>👉click here👈</u></p>
+      <p>did not work? ofc it won't, click the below shit</p>
+      <a href="page2.html">
+        <button>yes, here!</button>
+      </a>
+    </div>
+
+    <script>
+      // Fade-out transition before going to page 2
+      document.querySelector("button").addEventListener("click", function(event) {
+        event.preventDefault();
+        document.body.style.transition = "opacity 0.5s";
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+          window.location.href = "page2.html";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
